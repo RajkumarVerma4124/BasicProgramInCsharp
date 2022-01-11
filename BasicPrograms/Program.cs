@@ -19,7 +19,9 @@ namespace BasicPrograms
                 Console.Write("1: Check Even Or Odd"+
                             "\n2: Check Positive Or Negative"+
                             "\n3: Check Sum Of Natural Number"+
-                            "\n4: Check Sum Of Number In a Given Range"
+                            "\n4: Check Sum Of Number In a Given Range"+
+                            "\n5: Greatest of two numbers" +
+                            "\n6: Greatest of Three numbers"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -46,6 +48,22 @@ namespace BasicPrograms
                         Console.Write("Enter the final number for calculating sum of natural numbers : ");
                         int FRange = int.Parse(Console.ReadLine());
                         CheckPrograms.SumOfNatNum(IRange, FRange);
+                        break;
+                    case 5:
+                        Console.Write("Enter the first number : ");
+                        int fNum = int.Parse(Console.ReadLine());
+                        Console.Write("Enter the second number : ");
+                        int sNum = int.Parse(Console.ReadLine());
+                        CheckPrograms.GOfTwoNum(fNum, sNum);
+                        break;
+                    case 6:
+                        Console.Write("Enter the first number : ");
+                        int fNumber = int.Parse(Console.ReadLine());
+                        Console.Write("Enter the second number : ");
+                        int sNumber = int.Parse(Console.ReadLine());
+                        Console.Write("Enter the third number : ");
+                        int tNumber = int.Parse(Console.ReadLine());
+                        CheckPrograms.GOfThreeNum(fNumber, sNumber, tNumber);
                         break;
 
                     default:

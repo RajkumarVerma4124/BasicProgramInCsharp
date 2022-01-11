@@ -45,5 +45,21 @@ namespace BasicPrograms
             Console.WriteLine("Sum of numbers in the range from " + inum + " to " + fNum + " is " + sum);
             Console.ReadLine();
         }
+
+        //Greatest of two numbers 
+        public static void GOfTwoNum(int fNum, int sNum)
+        {
+            int result = fNum > sNum ? fNum : sNum;
+            Console.WriteLine("The Number " + result + " is the greatest");
+            Console.ReadLine();
+        }
+
+        //Greatest of three numbers
+        public static void GOfThreeNum(int fNum, int sNum, int tNum)
+        {
+            int result = tNum > (fNum > sNum ? fNum : sNum) ? tNum : (fNum > sNum ? fNum : sNum);
+            Console.WriteLine("The Number " + result + " is the greatest");
+            Console.ReadLine();
+        }
     }
 }
