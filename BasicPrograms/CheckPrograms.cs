@@ -72,5 +72,51 @@ namespace BasicPrograms
                 Console.WriteLine(year + " is not a leap year.");
             Console.ReadLine();
         }
+
+        //Check Prime Number
+        public static void ChkPrime(int pNum)
+        {
+            int count = 0;
+            if (pNum == 1)
+                Console.WriteLine("Not a prime number");
+            else if (pNum == 2)
+                Console.WriteLine("It is a prime number");
+            else
+            {
+                for (int i = 2; i <= pNum; i++)
+                {
+                    if (pNum % i == 0)
+                        count++;
+                    break;
+                }
+                if (count == 1)
+                    Console.WriteLine("Not a prime");
+                else
+                    Console.WriteLine("Prime Number");
+            }
+
+            Console.ReadLine();
+        }
+
+        //Print Prime Numbers
+        public static void PrintPrimeNum(int startNum, int endNum)
+        {
+            Console.WriteLine("Prime numbers between " + startNum + " and " + endNum + " are : ");
+            int count;
+            //loop for finding and printing all prime numbers between given range
+            for (int i = startNum; i <= endNum; i++)
+            {
+                //logic for checking number is prime or not
+                count = 0;
+                for (int j = 1; j <= i; j++)
+                {
+                    if (i % j == 0)
+                        count = count + 1;
+                }
+                if (count == 2)
+                    Console.Write(i + " : ");
+            }
+            Console.ReadLine();
+        }
     }
 }

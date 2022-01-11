@@ -22,7 +22,9 @@ namespace BasicPrograms
                             "\n4: Check Sum Of Number In a Given Range"+
                             "\n5: Greatest of two numbers" +
                             "\n6: Greatest of Three numbers"+
-                            "\n7: Leap Year Or Not"
+                            "\n7: Leap Year Or Not"+
+                            "\n8: Check Prime Or Not" +
+                            "\n9: Print Prime Numbers"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -70,6 +72,18 @@ namespace BasicPrograms
                         Console.Write("Enter a year to check if its a leap year : ");
                         int year = int.Parse(Console.ReadLine());
                         CheckPrograms.ChkLeapOrNot(year);
+                        break;
+                    case 8:
+                        Console.Write("Enter a number to check prime : ");
+                        int chkPriNum = int.Parse(Console.ReadLine());
+                        CheckPrograms.ChkPrime(chkPriNum);
+                        break;
+                    case 9:
+                        Console.Write("Enter Starting Number : ");
+                        int startNum = int.Parse(Console.ReadLine());
+                        Console.Write("Enter Ending Number : ");
+                        int endNum = int.Parse(Console.ReadLine());
+                        CheckPrograms.PrintPrimeNum(startNum, endNum);
                         break;
                     default:
                         Environment.Exit(0);
