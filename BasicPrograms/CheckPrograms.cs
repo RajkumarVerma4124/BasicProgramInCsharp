@@ -27,7 +27,15 @@ namespace BasicPrograms
             Console.ReadLine();
         }
 
-       
+        //To check sum of natural numbers
+        public static void SumOfNatNum(int num)
+        {
+            int sum = (num * (num + 1)) / 2;
+            Console.WriteLine("The sum of natural number is : " + sum);
+            Console.ReadLine();
+        }
+
+
 
 
     }

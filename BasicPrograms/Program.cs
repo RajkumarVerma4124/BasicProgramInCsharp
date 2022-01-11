@@ -17,8 +17,8 @@ namespace BasicPrograms
             while (true) {
                 Console.WriteLine("Enter a choice from below : ");
                 Console.Write("1: Check Even Or Odd"+
-                            "\n2: Check Positive Or Negative"
-                            
+                            "\n2: Check Positive Or Negative"+
+                            "\n3: Check Sum Of Natural Number"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -34,7 +34,12 @@ namespace BasicPrograms
                         int chknum = int.Parse(Console.ReadLine());
                         CheckPrograms.PosOrNeg(chknum);
                         break;
-                    
+                    case 3:
+                        Console.Write("Enter a final range to calculate natural numbers : ");
+                        int range = int.Parse(Console.ReadLine());
+                        CheckPrograms.SumOfNatNum(range);
+                        break;
+
                     default:
                         Environment.Exit(0);
                         return;
