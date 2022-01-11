@@ -24,7 +24,8 @@ namespace BasicPrograms
                             "\n6: Greatest of Three numbers"+
                             "\n7: Leap Year Or Not"+
                             "\n8: Check Prime Or Not" +
-                            "\n9: Print Prime Numbers"
+                            "\n9: Print Prime Numbers"+
+                            "\n10: Sum Of Digits "
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -84,6 +85,11 @@ namespace BasicPrograms
                         Console.Write("Enter Ending Number : ");
                         int endNum = int.Parse(Console.ReadLine());
                         CheckPrograms.PrintPrimeNum(startNum, endNum);
+                        break;
+                    case 10:
+                        Console.Write("Enter a digit to add : ");
+                        int digit = int.Parse(Console.ReadLine());
+                        CheckPrograms.SumOfDigits(digit);
                         break;
                     default:
                         Environment.Exit(0);
