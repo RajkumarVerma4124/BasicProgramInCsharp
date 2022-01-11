@@ -26,7 +26,8 @@ namespace BasicPrograms
                             "\n8: Check Prime Or Not" +
                             "\n9: Print Prime Numbers"+
                             "\n10: Sum Of Digits"+
-                            "\n11: Reverse A Number Or String "
+                            "\n11: Reverse A Number Or String"+
+                            "\n12: Check Palindrom Or Not " 
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -96,6 +97,11 @@ namespace BasicPrograms
                         Console.Write("Enter a number or string to reverse : ");
                         string numR = Console.ReadLine();
                         CheckPrograms.ReverseNum(numR);
+                        break;
+                    case 12:
+                        Console.Write("Enter a string : ");
+                        string palStr = Console.ReadLine();
+                        CheckPrograms.ChkPalindrome(palStr);
                         break;
                     default:
                         Environment.Exit(0);

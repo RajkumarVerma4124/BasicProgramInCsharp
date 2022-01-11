@@ -132,7 +132,7 @@ namespace BasicPrograms
             Console.WriteLine("Sum of Digits = " + sum);
             Console.ReadLine();
         }
-        //Printing Reverse of a number
+        //Printing Reverse of a number and string
         public static void ReverseNum(string numR)
         {
             // Converting string to character array
@@ -145,6 +145,25 @@ namespace BasicPrograms
                 tempStr = tempStr + charNum[i];
             }
             Console.WriteLine(tempStr);
+            Console.ReadLine();
+        }
+
+        //Checking a given number is palindrome or not
+        public static void ChkPalindrome(string palStr)
+        {
+            // Converting string to character array
+            char[] charStr = palStr.ToCharArray();
+            // Declaring an empty string
+            string tempStr = string.Empty;
+            for (int i = 0; i < charStr.Length; i++)
+            {
+                // Append each character to the temp string.
+                tempStr = tempStr + charStr[i];
+            }
+            if (tempStr.Equals(palStr))
+                Console.WriteLine("It is palindrom");
+            else
+                Console.WriteLine("Not a pam=lindrome");
             Console.ReadLine();
         }
     }
