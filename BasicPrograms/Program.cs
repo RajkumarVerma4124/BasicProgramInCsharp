@@ -25,7 +25,8 @@ namespace BasicPrograms
                             "\n7: Leap Year Or Not"+
                             "\n8: Check Prime Or Not" +
                             "\n9: Print Prime Numbers"+
-                            "\n10: Sum Of Digits "
+                            "\n10: Sum Of Digits"+
+                            "\n11: Reverse A Number Or String "
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -90,6 +91,11 @@ namespace BasicPrograms
                         Console.Write("Enter a digit to add : ");
                         int digit = int.Parse(Console.ReadLine());
                         CheckPrograms.SumOfDigits(digit);
+                        break;
+                    case 11:
+                        Console.Write("Enter a number or string to reverse : ");
+                        string numR = Console.ReadLine();
+                        CheckPrograms.ReverseNum(numR);
                         break;
                     default:
                         Environment.Exit(0);

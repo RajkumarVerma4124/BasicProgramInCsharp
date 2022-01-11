@@ -132,5 +132,20 @@ namespace BasicPrograms
             Console.WriteLine("Sum of Digits = " + sum);
             Console.ReadLine();
         }
+        //Printing Reverse of a number
+        public static void ReverseNum(string numR)
+        {
+            // Converting string to character array
+            char[] charNum = numR.ToCharArray();
+            // Declaring an empty string
+            string tempStr = string.Empty;
+            for (int i = charNum.Length - 1; i > -1; i--)
+            {
+                // Append each character to the temp string.
+                tempStr = tempStr + charNum[i];
+            }
+            Console.WriteLine(tempStr);
+            Console.ReadLine();
+        }
     }
 }
