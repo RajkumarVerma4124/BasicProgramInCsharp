@@ -188,5 +188,26 @@ namespace BasicPrograms
                 Console.WriteLine("Wrong input");
             Console.ReadLine();
         }
+
+        //Printing ArmStrong Number
+        public static void ArmstrongNumber(int aStart, int aEnd)
+        {
+            Console.Write("Armstrong numbers between : " + aStart + " and " + aEnd + " are : ");
+            int tempNum, sum;
+            for (int i = aStart; i <= aEnd; i++)
+            {
+                tempNum = i;
+                sum = 0;
+                while (tempNum != 0)
+                {
+                    int pLast = tempNum % 10;
+                    sum = sum + Convert.ToInt32(Math.Pow(pLast, 3));
+                    tempNum = tempNum / 10;
+                }
+                if (sum == i)
+                    Console.Write(i + " ");
+            }
+            Console.ReadLine();
+        }
     }
 }
