@@ -21,7 +21,8 @@ namespace BasicPrograms
                             "\n3: Check Sum Of Natural Number"+
                             "\n4: Check Sum Of Number In a Given Range"+
                             "\n5: Greatest of two numbers" +
-                            "\n6: Greatest of Three numbers"
+                            "\n6: Greatest of Three numbers"+
+                            "\n7: Leap Year Or Not"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -65,7 +66,11 @@ namespace BasicPrograms
                         int tNumber = int.Parse(Console.ReadLine());
                         CheckPrograms.GOfThreeNum(fNumber, sNumber, tNumber);
                         break;
-
+                    case 7:
+                        Console.Write("Enter a year to check if its a leap year : ");
+                        int year = int.Parse(Console.ReadLine());
+                        CheckPrograms.ChkLeapOrNot(year);
+                        break;
                     default:
                         Environment.Exit(0);
                         return;
