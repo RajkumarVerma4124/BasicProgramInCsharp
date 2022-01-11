@@ -34,9 +34,16 @@ namespace BasicPrograms
             Console.WriteLine("The sum of natural number is : " + sum);
             Console.ReadLine();
         }
-
-
-
-
+        //To check sum of natural number within a range
+        public static void SumOfNatNum(int inum, int fNum)
+        {
+            int sum = 0;
+            for (int i = inum; i <= fNum; i++)
+            {
+                sum = sum + i;
+            }
+            Console.WriteLine("Sum of numbers in the range from " + inum + " to " + fNum + " is " + sum);
+            Console.ReadLine();
+        }
     }
 }
