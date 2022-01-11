@@ -27,7 +27,8 @@ namespace BasicPrograms
                             "\n9: Print Prime Numbers"+
                             "\n10: Sum Of Digits"+
                             "\n11: Reverse A Number Or String"+
-                            "\n12: Check Palindrom Or Not " 
+                            "\n12: Check Palindrom Or Not"+
+                            "\n13: Fibonacci series up to range"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -102,6 +103,11 @@ namespace BasicPrograms
                         Console.Write("Enter a string : ");
                         string palStr = Console.ReadLine();
                         CheckPrograms.ChkPalindrome(palStr);
+                        break;
+                    case 13:
+                        Console.Write("Enter a limit of the fibonacci series : ");
+                        int finNum = int.Parse(Console.ReadLine());
+                        CheckPrograms.FiboSeries(finNum);
                         break;
                     default:
                         Environment.Exit(0);

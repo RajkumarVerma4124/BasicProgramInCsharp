@@ -166,5 +166,27 @@ namespace BasicPrograms
                 Console.WriteLine("Not a pam=lindrome");
             Console.ReadLine();
         }
+        //Displaying Fibonacci Series upto nth term
+        public static void FiboSeries(int limit)
+        {
+            if (limit > 0)
+            {
+                int fNum = 0, sNum = 1, tNum;
+                //display starting two numbers of series
+                Console.Write("Fibonacci Series : " + fNum + "  " + sNum + "  ");
+                while (sNum <= limit)
+                {
+                    tNum = fNum + sNum;
+                    fNum = sNum;
+                    sNum = tNum;
+                    if (sNum <= limit)
+                        Console.Write(tNum + " ");
+                }
+
+            }
+            else
+                Console.WriteLine("Wrong input");
+            Console.ReadLine();
+        }
     }
 }
