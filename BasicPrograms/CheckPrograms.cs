@@ -212,15 +212,6 @@ namespace BasicPrograms
 
         public static void SwapNumbers(int i, int j)
         {
-            /*int temp = 0;
-            temp = i;
-            i = j;
-            j = temp;*/
-
-           /* a = a + b; //a=15 (5+10)      
-            b = a - b; //b=5 (15-10)      
-            a = a - b; //a=10 (15-5)*/   
-
             // SUppose number are i = 5 and i = 6
             i = i * j;  // i = (5 * 6) i.e 30
             j = i / j;  // j = 30/6 i.e = 5
