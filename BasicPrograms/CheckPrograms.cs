@@ -40,7 +40,7 @@ namespace BasicPrograms
             int sum = 0;
             for (int i = inum; i <= fNum; i++)
             {
-                sum = sum + i;
+                sum += i;
             }
             Console.WriteLine("Sum of numbers in the range from " + inum + " to " + fNum + " is " + sum);
             Console.ReadLine();
@@ -78,21 +78,25 @@ namespace BasicPrograms
         {
             int count = 0;
             if (pNum == 1)
+            {
                 Console.WriteLine("Not a prime number");
+            }
             else if (pNum == 2)
+            {
                 Console.WriteLine("It is a prime number");
-            else
+
+            }
+            else 
             {
                 for (int i = 2; i <= pNum; i++)
                 {
                     if (pNum % i == 0)
                         count++;
-                    break;
                 }
                 if (count == 1)
-                    Console.WriteLine("Not a prime");
-                else
                     Console.WriteLine("Prime Number");
+                else
+                    Console.WriteLine("Not a Prime Number");
             }
 
             Console.ReadLine();
@@ -111,7 +115,7 @@ namespace BasicPrograms
                 for (int j = 1; j <= i; j++)
                 {
                     if (i % j == 0)
-                        count = count + 1;
+                        count++;
                 }
                 if (count == 2)
                     Console.Write(i + " : ");
@@ -126,8 +130,8 @@ namespace BasicPrograms
             while (digit != 0)
             {
                 int lastNum = digit % 10;
-                sum = sum + lastNum;
-                digit = digit / 10;
+                sum += lastNum;
+                digit /= 10;
             }
             Console.WriteLine("Sum of Digits = " + sum);
             Console.ReadLine();
@@ -142,7 +146,7 @@ namespace BasicPrograms
             for (int i = charNum.Length - 1; i > -1; i--)
             {
                 // Append each character to the temp string.
-                tempStr = tempStr + charNum[i];
+                tempStr += charNum[i];
             }
             Console.WriteLine(tempStr);
             Console.ReadLine();
@@ -158,7 +162,7 @@ namespace BasicPrograms
             for (int i = 0; i < charStr.Length; i++)
             {
                 // Append each character to the temp string.
-                tempStr = tempStr + charStr[i];
+                tempStr += charStr[i];
             }
             if (tempStr.Equals(palStr))
                 Console.WriteLine("It is palindrom");
@@ -201,8 +205,8 @@ namespace BasicPrograms
                 while (tempNum != 0)
                 {
                     int pLast = tempNum % 10;
-                    sum = sum + Convert.ToInt32(Math.Pow(pLast, 3));
-                    tempNum = tempNum / 10;
+                    sum += Convert.ToInt32(Math.Pow(pLast, 3));
+                    tempNum /= 10;
                 }
                 if (sum == i)
                     Console.Write(i + " ");
@@ -210,12 +214,13 @@ namespace BasicPrograms
             Console.ReadLine();
         }
 
+        //Swapping of number
         public static void SwapNumbers(int i, int j)
         {
             // SUppose number are i = 5 and i = 6
-            i = i * j;  // i = (5 * 6) i.e 30
+            i *= j;  // i = (5 * 6) i.e 30
             j = i / j;  // j = 30/6 i.e = 5
-            i = i / j;  // i = 30/5 i.e = 6
+            i /= j;  // i = 30/5 i.e = 6
 
             Console.WriteLine("After Swaping : "+i+" "+j);
             Console.ReadLine();
@@ -226,10 +231,23 @@ namespace BasicPrograms
             i = i + j + k; // (i = 60)
             j = i - (j + k); // (j = 60 – (20+30) =10)
             k = i - (j + k); // (k = 60 – (10 + 30) = 20)
-            i = i - (j + k); // (i = = 60 – (10 + 20) = 30)
+            i -= (j + k); // (i = = 60 – (10 + 20) = 30)
             Console.WriteLine("After Swaping : " + i + " " + j+" "+k);
             Console.ReadLine();
 
+        }
+
+        //Factorial of a number
+        public static void Factorial(int factNum)
+        {
+            int factorial = 1, i = 1;
+            while (i <= factNum)
+            {
+                factorial *= i;
+                i++;
+            }
+            Console.WriteLine("The Factorial Of "+factNum+" is "+factorial);
+            Console.ReadLine();
         }
     }
 }

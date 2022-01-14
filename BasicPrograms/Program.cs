@@ -30,7 +30,8 @@ namespace BasicPrograms
                             "\n12: Check Palindrom Or Not"+
                             "\n13: Fibonacci series up to range"+
                             "\n14: Armstrong Number Between A Range"+
-                            "\n15: Swaping Of Two And Three Numbers"
+                            "\n15: Swaping Of Two And Three Numbers"+
+                            "\n16: Factorial Of a Number"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -142,6 +143,11 @@ namespace BasicPrograms
                                 break;
                         }
 
+                        break;
+                    case 16:
+                        Console.Write("Enter the number to get the factorial : ");
+                        int factNum = int.Parse(Console.ReadLine());
+                        CheckPrograms.Factorial(factNum);
                         break;
                     default:
                         Environment.Exit(0);
