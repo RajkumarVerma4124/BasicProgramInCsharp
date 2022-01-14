@@ -29,7 +29,8 @@ namespace BasicPrograms
                             "\n11: Reverse A Number Or String"+
                             "\n12: Check Palindrom Or Not"+
                             "\n13: Fibonacci series up to range"+
-                            "\n14: Armstrong Number Between A Range"
+                            "\n14: Armstrong Number Between A Range"+
+                            "\n15: Swaping Of Two And Three Numbers"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -116,6 +117,31 @@ namespace BasicPrograms
                         Console.Write("Enter a Ending Number : ");
                         int aEnd = int.Parse(Console.ReadLine());
                         CheckPrograms.ArmstrongNumber(aStart, aEnd);
+                        break;
+                    case 15:
+                        Console.WriteLine("Enter The Choice From Below :");
+                        Console.WriteLine("1: Swap Two Numbers \n2: Swap Three Numbers");
+                        int ch = int.Parse(Console.ReadLine());
+                        switch (ch) 
+                        {
+                            case 1:
+                                Console.Write("Enter The First Number :");
+                                int SFNum = int.Parse(Console.ReadLine());
+                                Console.Write("Enter The Second Number :");
+                                int SSNum = int.Parse(Console.ReadLine());
+                                CheckPrograms.SwapNumbers(SFNum, SSNum);
+                                break;
+                            case 2:
+                                Console.Write("Enter The First Number :");
+                                int SwFNum = int.Parse(Console.ReadLine());
+                                Console.Write("Enter The Second Number :");
+                                int SwSNum = int.Parse(Console.ReadLine());
+                                Console.Write("Enter The Second Number :");
+                                int SwTNum = int.Parse(Console.ReadLine());
+                                CheckPrograms.SwapNumbers(SwFNum, SwSNum, SwTNum);
+                                break;
+                        }
+
                         break;
                     default:
                         Environment.Exit(0);

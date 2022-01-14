@@ -209,5 +209,36 @@ namespace BasicPrograms
             }
             Console.ReadLine();
         }
+
+        public static void SwapNumbers(int i, int j)
+        {
+            /*int temp = 0;
+            temp = i;
+            i = j;
+            j = temp;*/
+
+           /* a = a + b; //a=15 (5+10)      
+            b = a - b; //b=5 (15-10)      
+            a = a - b; //a=10 (15-5)*/   
+
+            // SUppose number are i = 5 and i = 6
+            i = i * j;  // i = (5 * 6) i.e 30
+            j = i / j;  // j = 30/6 i.e = 5
+            i = i / j;  // i = 30/5 i.e = 6
+
+            Console.WriteLine("After Swaping : "+i+" "+j);
+            Console.ReadLine();
+        }
+        public static void SwapNumbers(int i, int j, int k)
+        {
+            //i = 10, j = 20, k = 30;
+            i = i + j + k; // (i = 60)
+            j = i - (j + k); // (j = 60 – (20+30) =10)
+            k = i - (j + k); // (k = 60 – (10 + 30) = 20)
+            i = i - (j + k); // (i = = 60 – (10 + 20) = 30)
+            Console.WriteLine("After Swaping : " + i + " " + j+" "+k);
+            Console.ReadLine();
+
+        }
     }
 }
