@@ -249,5 +249,13 @@ namespace BasicPrograms
             Console.WriteLine("The Factorial Of "+factNum+" is "+factorial);
             Console.ReadLine();
         }
+
+        //Method to get power of a number
+        public static void PowerOfNum(int powNum)
+        {
+            int ResOfPow = Convert.ToInt32(Math.Pow(powNum,2));
+            Console.WriteLine("The Power Of "+powNum+" is : "+ResOfPow);
+
+        }
     }
 }

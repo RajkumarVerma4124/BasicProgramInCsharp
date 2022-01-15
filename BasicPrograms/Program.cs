@@ -31,7 +31,8 @@ namespace BasicPrograms
                             "\n13: Fibonacci series up to range"+
                             "\n14: Armstrong Number Between A Range"+
                             "\n15: Swaping Of Two And Three Numbers"+
-                            "\n16: Factorial Of a Number"
+                            "\n16: Factorial Of a Number"+
+                            "\n17: Power Of a Number"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -148,6 +149,11 @@ namespace BasicPrograms
                         Console.Write("Enter the number to get the factorial : ");
                         int factNum = int.Parse(Console.ReadLine());
                         CheckPrograms.Factorial(factNum);
+                        break;
+                    case 17:
+                        Console.Write("Enter a number to get the power of : ");
+                        int numPow = int.Parse(Console.ReadLine());
+                        CheckPrograms.PowerOfNum(numPow);
                         break;
                     default:
                         Environment.Exit(0);
