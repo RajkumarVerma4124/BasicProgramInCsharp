@@ -271,6 +271,30 @@ namespace BasicPrograms
             }
             Console.WriteLine("\n");
         }
+        
+        //Method to check the strong number
+        public static void ChkStrngNum(int strngNum)
+        {
+            int sumNum = 0;
+            int tempNum = strngNum;
+            while (tempNum != 0)
+            {
+                int lstNum = tempNum % 10;
+                int i = 1, number = 1;
+                while (i <= lstNum)
+                {
+                    number *= i;
+                    i++;
+                }
+                tempNum /= 10;
+                sumNum += number;
+
+            }
+            if (sumNum == strngNum)
+                Console.WriteLine("It is a strong number\n");
+            else
+                Console.WriteLine("It is not a strong number\n");
+        }
 
     }
 }
