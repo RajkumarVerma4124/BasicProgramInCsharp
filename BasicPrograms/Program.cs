@@ -34,7 +34,8 @@ namespace BasicPrograms
                             "\n16: Factorial Of a Number"+
                             "\n17: Power Of a Number"+
                             "\n18: Factors Of a Given Number"+
-                            "\n19: Check The Strong Number"
+                            "\n19: Check The Strong Number"+
+                            "\n20: Check The Perfect Number"
                              );
                 Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
@@ -163,9 +164,14 @@ namespace BasicPrograms
                         CheckPrograms.FactorsOfNum(numFact);
                         break;
                     case 19:
-                        Console.Write("Enter a number to check if it strong number : ");
+                        Console.Write("Enter a number to check if its strong number : ");
                         int strngNum = int.Parse(Console.ReadLine());
                         CheckPrograms.ChkStrngNum(strngNum);
+                        break;
+                    case 20:
+                        Console.Write("Enter a number to check if its perfect number : ");
+                        int perfNum = int.Parse(Console.ReadLine());
+                        CheckPrograms.ChkPerfectNum(perfNum);
                         break;
                     default:
                         Environment.Exit(0);
