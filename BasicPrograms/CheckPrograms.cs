@@ -257,5 +257,20 @@ namespace BasicPrograms
             Console.WriteLine("The Power Of "+powNum+" is : "+ResOfPow);
 
         }
+
+        //Method to get Factors of a number
+        public static void FactorsOfNum(int NumFact)
+        {
+            Console.Write("The Factors of "+NumFact+" are : ");
+            for (int i = 1; i <= NumFact; i++)
+            {
+                if (NumFact % i == 0)
+                {
+                    Console.Write(i+" ");
+                }
+            }
+            Console.WriteLine("\n");
+        }
+
     }
 }
